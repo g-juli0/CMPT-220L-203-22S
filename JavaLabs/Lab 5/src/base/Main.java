@@ -1,4 +1,6 @@
-package base;
+//package base;
+import java.util.Scanner;
+import javax.swing.Exception;
 
 public class Main {
     /**
@@ -29,11 +31,84 @@ public class Main {
 
     public static void main(String[] args) {
         //	Replace this with your dry inventory function!
-        wet_inventory();
+        dry_inventory();
     }
 
     static void dry_inventory() {
         // Your DRY Solution goes here!
+
+        // begin loop for 15 customers
+        for(int i = 0; i < 15; i++) {
+                
+            try {
+                // initialize Scanner object
+                Scanner input = new Scanner(System.in);
+
+                // greeting message
+                System.out.println("\nWelcome to JavaLabs Lemonade!");
+                System.out.println("-----------------------------");
+                System.out.println(String.format("We have %d lemonades available and %d pretzels availiable.", lemonades_available, pretzels_available));
+                System.out.println("");
+                
+                // get lemonade input
+                int lemonades_bought = 100;
+                while(lemonades_bought > lemonades_available) {
+                    System.out.print("Enter the number of lemonade cups you would like to buy: ");
+                    lemonades_bought = input.nextInt();
+
+                    if(lemonades_bought > lemonades_available) {
+                        System.out.println("Sorry, we don't have that many lemonades in stock. Order again."); 
+                    } else {
+                        // remove from stock
+                        lemonades_available -= lemonades_bought;
+                        // break out of loop so the new lemonades_available value doesnt trigger the loop again
+                        break;
+                    }
+                }
+
+                // get pretzel input
+                int pretzels_bought = 100;
+                while(pretzels_bought > pretzels_available) {
+                    System.out.print("Enter the number of pretzels you would like to buy: ");
+                    pretzels_bought = input.nextInt();
+
+                    if(pretzels_bought > pretzels_available) {
+                        System.out.println("Sorry, we don't have that many lemonades in stock. Order again.");
+                    } else {
+                        // remove from stock
+                        pretzels_available -= pretzels_bought;
+                        // break out of loop so the new pretzels_available value doesnt trigger the loop again
+                        break;
+                    }
+                }
+                
+                // calculate total cost
+                int totalCost = (8 * lemonades_bought) + (2 * pretzels_bought);
+                System.out.println("Total owed: " + totalCost);
+                cash += totalCost;
+
+                // get tip
+                System.out.print("Enter tip: ");
+                int addedTip = input.nextInt();
+                tips += addedTip;
+
+                System.out.println("\nThank you for your purchase!");
+
+            } catch (Exception ex) {
+                System.err.println("Please input a number value.");
+            }
+        }
+
+        // closing message
+        System.out.println("\nShop closed.");
+
+        // print results
+        System.out.println("----------------------------------");
+        System.out.println("Results for the hour!");
+        System.out.println("Lemonades Inventory: " + lemonades_available);
+        System.out.println("Pretzels Inventory: " + pretzels_available);
+        System.out.println("Cash: " + cash);
+        System.out.println("Tips: " + tips);
     }
 
     static void wet_inventory() {
