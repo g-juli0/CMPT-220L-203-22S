@@ -1,6 +1,5 @@
 //package base;
 import java.util.Scanner;
-import javax.swing.Exception;
 
 public class Main {
     /**
