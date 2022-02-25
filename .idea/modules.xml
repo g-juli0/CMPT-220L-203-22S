@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/CMPT-220L-203-22S.iml" filepath="$PROJECT_DIR$/.idea/CMPT-220L-203-22S.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuickDemos/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/QuickDemos/HelloWorld/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaLabs/HelloWorld/HelloWorld1.iml" filepath="$PROJECT_DIR$/JavaLabs/HelloWorld/HelloWorld1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuickDemos/IntelliJDemo/IntelliJDemo.iml" filepath="$PROJECT_DIR$/QuickDemos/IntelliJDemo/IntelliJDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaLabs/JavaLabs.iml" filepath="$PROJECT_DIR$/JavaLabs/JavaLabs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaLabs/Lab 3/Lab 3.iml" filepath="$PROJECT_DIR$/JavaLabs/Lab 3/Lab 3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaLabs/Lab 5/Lab 5.iml" filepath="$PROJECT_DIR$/JavaLabs/Lab 5/Lab 5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaLabs/Lab 6/Lab 6.iml" filepath="$PROJECT_DIR$/JavaLabs/Lab 6/Lab 6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuickDemos/Person/Person.iml" filepath="$PROJECT_DIR$/QuickDemos/Person/Person.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuickDemos/VSCodeDemo/VSCodeDemo.iml" filepath="$PROJECT_DIR$/QuickDemos/VSCodeDemo/VSCodeDemo.iml" />
+    </modules>
+  </component>
+</project>
