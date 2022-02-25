@@ -72,5 +72,8 @@ public class Main {
         System.out.println(nums4);
 
         // Using the information in the Lab 6 Jupyter Notebook create an instance of plant here.
+        Plant aloe = new Plant(false, "Succulent", "Aloe");
+        System.out.println(aloe.wateringInstructions());
+        System.out.println(aloe.sunlightRequirements());
     }
 }
