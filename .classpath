@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="JavaLabs/HelloWorld/src"/>
+	<classpathentry kind="src" path="JavaLabs/Lab 3/src/base"/>
+	<classpathentry kind="src" path="JavaLabs/Lab 4"/>
+	<classpathentry kind="src" path="JavaLabs/Lab 5/src/base"/>
+	<classpathentry kind="src" path="JavaLabs/Lab 6/src"/>
+	<classpathentry kind="src" path="QuickDemos/HelloWorld/src"/>
+	<classpathentry kind="src" path="QuickDemos/IntelliJDemo/src"/>
+	<classpathentry kind="src" path="QuickDemos/Person/src"/>
+	<classpathentry kind="src" path="QuickDemos/VSCodeDemo/VSCodeDemo/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
