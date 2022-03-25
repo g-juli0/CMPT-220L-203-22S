@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public class ListItem {
+public class ListItem {
+
+    public ListItem() {
+
+    }
+
 }

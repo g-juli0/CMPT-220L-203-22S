@@ -47,7 +47,7 @@ public class Main {
                 System.out.println("\nWelcome to JavaLabs Lemonade!");
                 System.out.println("-----------------------------");
                 System.out.println(String.format("We have %d lemonades available and %d pretzels availiable.", lemonades_available, pretzels_available));
-                System.out.println("");
+                System.out.println();
                 
                 // get lemonade input
                 int lemonades_bought = 100;
