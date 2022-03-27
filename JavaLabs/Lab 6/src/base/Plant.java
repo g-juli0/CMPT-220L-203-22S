@@ -17,9 +17,9 @@ public class Plant {
      * @param name - name of Plant type
      */
     Plant(boolean needsWatering, String plantFamily, String name) {
-        needsWatering = this.needsWatering;
-        plantFamily = this.plantFamily;
-        name = this.name;
+        this.needsWatering = needsWatering;
+        this.plantFamily = plantFamily;
+        this.name = name;
     }
 
     /**
