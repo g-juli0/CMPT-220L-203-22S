@@ -1,28 +1,28 @@
 /**
  * @author Gianna Julio
  * 
- * ListItem class allows user to chain together multiple
+ * Node class allows user to chain together multiple
  * values similat to a LinkedList (i think)
  */
-public class ListItem {
+public class Node {
 
     // initialize local variables
     int value;
-    ListItem next;
+    Node pointer;
 
     /**
      * 
      * @param value integer value being added to the list
-     * @param next the next object in the chain of ListItems
+     * @param pointer the next object in the chain of Node
      */
-    public ListItem(int value, ListItem next) {
-        this.value = value;
-        this.next = next;
+    public Node(int data, Node pointer) {
+        this.data = data;
+        this.pointer = pointer;
     }
 
     /**
      * 
-     * @param val new value to set the ListItem's integer value to
+     * @param val new value to set the Node's integer value to
      */
     public setValue(int val) {
         value = val;
@@ -30,7 +30,7 @@ public class ListItem {
 
     /**
      * 
-     * @return value of ListItem
+     * @return value of Node
      */
     public int getValue() {
         return value;
@@ -38,18 +38,18 @@ public class ListItem {
 
     /**
      * 
-     * @param next new ListItem to link to
+     * @param next new Node to link to
      */
-    public setNext(ListItem next) {
-        this.next = next;
+    public setPointer(Node pointer) {
+        this.pointer = pointer;
     }
 
     /**
      * 
-     * @return next ListItem in chain
+     * @return next Node in chain
      */
-    public ListItem getNextItem() {
-        return next;
+    public Node getNextItem() {
+        return pointer;
     }
 
     /**
