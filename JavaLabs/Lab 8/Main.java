@@ -3,15 +3,16 @@ package base;
 public class Main {
 
     public static void main(String[] args) {
-	    Node first = new Node(1);
-        Node second = new Node(2);
-        Node third = new Node(3);
-        Node fourth = new Node(4);
-        Node fifth = new Node(5);
 
-        first.nextNode = second;
-        second.nextNode = third;
-        third.nextNode = fourth;
-        fourth.nextNode = fifth;
+        LinkedList test = new LinkedList();
+
+	    test.add(5);
+        test.add(3);
+        test.add(1);
+        test.printList();
+        test.delete(3);
+        test.printList();
+        test.sort();
+        test.printList();
     }
 }
