@@ -1,4 +1,4 @@
-package src;
+package JavaLabs.BinarySearchTreeProject;
 
 public class Main {
 
