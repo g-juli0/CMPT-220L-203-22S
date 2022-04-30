@@ -11,6 +11,6 @@
 	<classpathentry kind="src" path="QuickDemos/Person/src"/>
 	<classpathentry kind="src" path="QuickDemos/VSCodeDemo/VSCodeDemo/src"/>
 	<classpathentry kind="src" path="JavaLabs/Binary Search Tree Project"/>
-	<classpathentry kind="src" path="JavaLabs/BinarySearchTreeProject"/>
+	<classpathentry kind="src" path="JavaLabs/BinarySearchTreeProject/src"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
