@@ -12,6 +12,9 @@ public class Main {
 		System.out.println("Binary Tree Creator");
 		System.out.println("-------------------");
 		
+		// initialize empty tree
+		BinarySearchTree tree = new BinarySearchTree();
+		
 		// initialize choice value
 		int choice = -1;
 		
@@ -25,10 +28,33 @@ public class Main {
 				// insert an element
 				if (choice == 1) {
 					
+					// get value
+					System.out.print("Enter value: ");
+					int value = input.nextInt();
+					
+					// create new Node with value from user
+					Node n = new Node(value);
+					
+					// insert the new Node beginning at the tree's root
+					tree.root = tree.insert(tree.root, n);
+					
+					// print inOrder to check (remove later)
+					tree.inOrder(tree.root);
+					
+					// confirmation message
+					System.out.println(". . . Value successfully added to tree.\n");
 				}
 				
 				// search for an element
 				else if (choice == 2) {
+					
+					// find element
+					// find smallest element
+					// find largest element
+					// find nth largest element
+					
+					// depth first search
+					// breadth first search
 					
 				}
 				
@@ -44,6 +70,10 @@ public class Main {
 				
 				// list elements
 				else if (choice == 5) {
+					
+					// in order
+					// pre order
+					// post order
 					
 				}
 				
