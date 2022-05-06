@@ -1,19 +1,27 @@
 
+/**
+ * @author gianna julio
+ * Binary Search Tree Project
+ * CMPT220 - Marist College
+ * May 2022
+ */
 public class BinarySearchTree {
 	
 	Node root;
 
     /**
-     * default constructor
+     * default constructor - instantiates an empty tree with an empty root
      */
     public BinarySearchTree() {
-    	
     	this.root = null;
-    	
     }
     
+    /**
+     * @param tempRoot root of the current branch being traversed. begins at root of tree
+     * @param n new node being inserted into the tree
+     * @return new Node n becomes tempRoot, return pointer of node to break recursion
+     */
     public Node insert(Node tempRoot, Node n) {
-    	
     	// if empty Node, make the new node the temporary root
     	if (tempRoot == null) {
     		tempRoot = n;
@@ -39,6 +47,11 @@ public class BinarySearchTree {
 	    return tempRoot;    		
     }
     
+    /**
+     * @param tempRoot temporary root of branch being traversed
+     * @param value integer value of Node being searched for
+     * @return Node with specified value, null if not found
+     */
     public Node search(Node tempRoot, int value) {
     	// Base Case - root is null or value is at root 
         if (tempRoot == null || tempRoot.value == value) {
@@ -52,10 +65,14 @@ public class BinarySearchTree {
         return search(tempRoot.rightChild, value);
     }
     
-    public int findHeight() {
+    public int findHeight(int height) {
     	return 42;
     }
     
+    /**
+     * @param root of the current branch being traversed. begins at root of tree
+     * @return the leftmost (smallest) value found in the tree
+     */
     public int findSmallestElement(Node root) {
     	// initially smallest = root
         int smallest = root.value; 
@@ -68,6 +85,10 @@ public class BinarySearchTree {
         return smallest; 
     }
     
+    /**
+     * @param root of the current branch being traversed. begins at root of tree
+     * @return the rightmost (largest) value found in the tree
+     */
     public int findLargestElement(Node root) {
     	// initially largest = root
         int largest = root.value; 
@@ -86,6 +107,11 @@ public class BinarySearchTree {
     	return 42;
     }
     
+    /**
+     * @param tempRoot temporary root of branch being traversed. starts at root of tree
+     * @param value integer value of Node to be deleted
+     * @return Node that takes the place of the deleted node
+     */
     public Node delete(Node tempRoot, int value) {
     	
     	// tree is empty
@@ -120,7 +146,7 @@ public class BinarySearchTree {
             // Delete the inOrder successor 
             tempRoot.rightChild = delete(tempRoot.rightChild, tempRoot.value); 
         } 
-        return root;
+        return tempRoot;
     	
     }
     
@@ -128,6 +154,9 @@ public class BinarySearchTree {
     	
     }
     
+    /**
+     * @param tempRoot root that printing starts out. root of binary tree
+     */
     public void inOrder(Node tempRoot) {
     	// left, root, right
     	if (tempRoot != null) {
@@ -137,6 +166,9 @@ public class BinarySearchTree {
         }
     }
     
+    /**
+     * @param tempRoot root that printing starts out. root of binary tree
+     */
     public void preOrder(Node tempRoot) {
     	// root, left, right
     	if (tempRoot != null) {
@@ -146,6 +178,9 @@ public class BinarySearchTree {
         }
     }
     
+    /**
+     * @param tempRoot root that printing starts out. root of binary tree
+     */
     public void postOrder(Node tempRoot) {
     	// left, right, root
     	if (tempRoot != null) {
