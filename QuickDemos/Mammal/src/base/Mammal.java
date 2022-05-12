@@ -1,6 +1,6 @@
 package base;
 
-public class Mammal {
+public abstract class Mammal {
     boolean hasFur;
     boolean hasVertabae;
     Integer height;
@@ -16,7 +16,5 @@ public class Mammal {
         announce();
     }
 
-    public void announce(){
-        System.out.println("Hey I'm a Mammal");
-    }
+    public abstract void announce();
 }

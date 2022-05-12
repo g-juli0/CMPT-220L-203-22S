@@ -9,4 +9,8 @@ public class Car extends Vehicle {
     public void whatAmI() {
         System.out.println("I am a Car");
     }
+
+    public void go(){
+        System.out.println("I'm going!");
+    }
 }

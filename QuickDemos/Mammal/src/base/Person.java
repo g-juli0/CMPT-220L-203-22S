@@ -1,6 +1,6 @@
 package base;
 
-public class Person extends Mammal{
+public class Person extends Mammal implements Biped{
     String SSN;
     Integer Intelligence;
     boolean hasHair;
@@ -11,4 +11,9 @@ public class Person extends Mammal{
         this.Intelligence = Intelligence;
         this.hasHair = hasHair;
     }
+
+    @Override
+    public void announce(){
+        System.out.println("Hi how's it going?");
+    };
 }
