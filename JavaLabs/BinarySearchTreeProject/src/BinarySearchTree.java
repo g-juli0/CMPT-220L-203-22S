@@ -1,6 +1,7 @@
+import java.util.ArrayList;
 
 /**
- * @author gianna julio
+ * @author Gianna Julio
  * Binary Search Tree Project
  * CMPT220 - Marist College
  * May 2022
@@ -10,7 +11,7 @@ public class BinarySearchTree {
 	Node root;
 
     /**
-     * default constructor - instantiates an empty tree with an empty root
+     * default constructor - instantiates an empty tree with a null root
      */
     public BinarySearchTree() {
     	this.root = null;
@@ -65,8 +66,28 @@ public class BinarySearchTree {
         return search(tempRoot.rightChild, value);
     }
     
-    public int findHeight(int height) {
-    	return 42;
+    /**
+     * @param tempRoot temporary starting root
+     * @return height of tree
+     */
+    public int height(Node tempRoot) {
+    	// not an edge
+    	if(tempRoot == null) {
+			return -1;  
+    	}
+    	
+		else {
+			
+            int left = height(tempRoot.leftChild);   
+            int right = height(tempRoot.rightChild); 
+            
+            if (left > right) {     
+                return left + 1; 
+            }
+            else {
+               return right + 1;
+            }
+		}
     }
     
     /**
@@ -101,9 +122,14 @@ public class BinarySearchTree {
         return largest; 
     }
     
-    public int findNthLargestElement() {
-    	// find smallest
-    	// traverse through (inorder?) and find the nth number
+    // TODO
+    public int findNthLargestElement(Node root, ArrayList<Node> values, int n) {
+    	 while (values.size() != n) {
+    		 // idk how to do this i give up :D
+   		 
+    	 }
+    	
+    	// add to smallest to arraylist until array is size n, return last value
     	return 42;
     }
     
@@ -150,6 +176,7 @@ public class BinarySearchTree {
     	
     }
     
+    // TODO
     public void reorganize() {
     	
     }
@@ -190,11 +217,56 @@ public class BinarySearchTree {
         }
     }
     
-    public Node depthFirstSearch(int value) {
+    /**
+     * @param tempRoot temporary starting point
+     * @param value int target value being searched for
+     * @return Node with value if found, null if not found
+     */
+    public Node depthFirstSearch(Node tempRoot, int value) {
+    	
+    	// if value matches, return
+    	if (tempRoot.value == value) {
+    		return tempRoot;
+    	}
+    	
+    	if(tempRoot.leftChild != null) {
+    		Node left = depthFirstSearch(tempRoot.leftChild, value);
+    		
+    		if(left == null) {
+    			return depthFirstSearch(tempRoot.rightChild, value);
+    		}
+    		
+    		return left;
+    	}
+    	
+    	// down
     	return null;
     }
     
-    public Node breadthFirstSearch(int value) {
+    
+    /**
+     * across L ---> R
+     * 
+     * @param tempRoot temporary starting point
+     * @param value int target value being searched for
+     * @return Node with value if found, null if not found
+     */
+    public Node breadthFirstSearch(Node tempRoot, int value) {
+    	
+    	// if value matches, return
+    	if (tempRoot.value == value) {
+    		return tempRoot;
+    	}
+    	
+    	// find both sides
+    	if (tempRoot.leftChild != null) {
+    		return breadthFirstSearch(tempRoot.leftChild, value);
+    	}
+    	
+    	if (tempRoot.rightChild != null) {
+    		return breadthFirstSearch(tempRoot.rightChild, value);
+    	}
+    	
     	return null;
     }
 

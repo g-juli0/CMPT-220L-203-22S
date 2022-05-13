@@ -1,23 +1,37 @@
-Project Title
-	A little brief about what the project is about. It should be like a small summary format informing about 
-	the main purpose of the project.
-Motivation
-	This section is for letting the reader know why you created this project, the reason behind pursuing such
-	a project, and why you have decided to do it.
+BINARY SEARCH TREE
+	Allows the user to insert values into a binary tree structure and search, delete, and list the
+	elements through various algorithms.
+	
 Build Status
-	This basically explains the current build status of the project. If there is a bug /error which needs 
-	addressing. This is done so for two different reasons The user understands that this is an issue and 
-	does not spend more time figuring if it was a mistake on their part. A developer who is familiar with 
-	the issue can suggest some solutions directly without going through the whole code.
+	All of the menu options are fully functional with the exception of the nth largest element option.
+	I could not figure out an algorithm to implement this successfully, so it does not work yet. Also,
+	there is no way to reorganize the tree after multiple insertions and deletions.
+
 Features
-	This is where you write what all extra features have been done in your project. Basically this is where 
-	you try to make your project stand out from the rest.
+	- Insert an Element
+	- Search for an Element
+		- Search for a value
+		- Find largest element
+		- Find smallest element
+		- Depth first search
+		- Breadth first search
+	- Find Tree Height
+	- Delete an element
+	- List Elements
+		- In order
+		- Pre order
+		- Post order
+		
 API reference
-	If your project is small, then we can add the reference docs in the readme. For larger projects, it is 
-	better to provide links to where the API reference documentation is documented.
-How to Use?
-	As I have mentioned before, you never know who is going to read your readme. So it is better to provide
-	information on how to use your project. A step-by-step guide is best suited for this purpose. It is 
-	better to explain steps as detailed as possible because it might be a beginner who is reading it.
+	- java.util.ArrayList - was going to be utilized for nth largest value, incomplete
+	- java.util.Scanner - utilized for user input
+
+How to Use
+	Enter the number of the option you would like the program to execute. Respond to any additional
+	follow up prompts
+
 Credits
-	me and google, use links in notes
+	@author Gianna Julio
+	
+	link to test run video:
+		https://drive.google.com/file/d/19gEEO7607XrrSd99zZn-qXGjPARunkxv/view?usp=sharing
